@@ -52,8 +52,8 @@ for i in range(WordleLength):
     print('        ', 'Distribution:', Distribution)
     print('        ', 'Max in Dist: ', MaxDistribution)
     print('        ', 'Max Letter:  ', InvLettersDict[Distribution.index(MaxDistribution)+1])
-    while Distribution != []:
-        LetterOrder += InvLettersDict[Distribution.index(max(Distribution))+1] + ', '
-        Distribution.remove(max(Distribution))
-    print('        ', 'Letter Order:', LetterOrder[:-2])
+    # while Distribution != []:
+    #     LetterOrder += InvLettersDict[Distribution.index(max(Distribution))+1] + ', '
+    #     Distribution.remove(max(Distribution))
+    # print('        ', 'Letter Order:', LetterOrder[:-2])
     print('')
