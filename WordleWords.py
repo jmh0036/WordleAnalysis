@@ -17,9 +17,6 @@ def LetterCountPosition(position):
     LocalLetterCount = [0] * 26
     for word in WordleWords:
         LocalLetterCount[ LettersDict[word[position]] - 1 ] += 1
-        # for letter in 'abcdefghijklmnopqrstuvwxyz':
-        #     if letter in word[position]:
-        #         LocalLetterCount[LettersDict[letter]-1] += 1
     return LocalLetterCount
 
 LetterCount = [0] * 26
