@@ -38,9 +38,26 @@ print('')
 
 MaxLetterCount = max(LetterCount)
 print('The letter', InvLettersDict[LetterCount.index(MaxLetterCount)+1], 'achieves occurs', MaxLetterCount, 'times, which is the maximum amount accounting for letters occuring multiple times in a single word.')
+MaxLetterCountDistWithLetter = []
+MaxLetterCountLetterOrder = ''
+for idx,occurrence in enumerate(LetterCount):
+    MaxLetterCountDistWithLetter.append([occurrence, InvLettersDict[idx+1]])
+MaxLetterCountDistWithLetter.sort()
+for letter in MaxLetterCountDistWithLetter:
+    MaxLetterCountLetterOrder += letter[1] + ' ,'
+print('    ', 'Letter Order accounting for letters occuring multiple times in a single word:', MaxLetterCountLetterOrder[:-2][::-1])
+print('')
 
 MaxLettersInWordCount = max(LettersInWordCount)
 print('The letter', InvLettersDict[LettersInWordCount.index(MaxLettersInWordCount)+1], 'achieves occurs', MaxLettersInWordCount, 'times, which is the maximum amount without accounting for letters occuring multiple times in a single word.')
+MaxLetterInWordCountDistWithLetter = []
+MaxLetterInWordCountLetterOrder = ''
+for idx,occurrence in enumerate(LettersInWordCount):
+    MaxLetterInWordCountDistWithLetter.append([occurrence, InvLettersDict[idx+1]])
+MaxLetterInWordCountDistWithLetter.sort()
+for letter in MaxLetterInWordCountDistWithLetter:
+    MaxLetterInWordCountLetterOrder += letter[1] + ' ,'
+print('    ', 'Letter Order without accounting for letters occuring multiple times in a single word:', MaxLetterInWordCountLetterOrder[:-2][::-1])
 
 print('')
 
