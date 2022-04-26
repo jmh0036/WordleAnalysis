@@ -86,8 +86,8 @@ for i in range(WordleLength):
     plt.bar(axletters, Distribution, color ='forestgreen',
         width = 0.4)
     plt.xlabel("Letters")
-    plt.ylabel("Words with that letter in Dictionary")
-    plt.title("Letter Appearance Not Accounting for Duplication Within a Word")
+    plt.ylabel("Words with that letter in position %s" %str(i))
+    plt.title("Letter Appearance in Position %s" %str(i))
     plt.savefig('LetterDistributionPosition%s' %str(i))
 
     MaxDistribution = max(Distribution)
