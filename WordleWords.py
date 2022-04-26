@@ -15,16 +15,16 @@ for word in set(twl.iterator()):
 print('Five Letter Words:', len(WordleWords))
 
 # Input: This function takes on an integer between 0 and WordleLength-1 
-# Output: a list of length 26 that counts the number of times each letter appears in that position
+# Output: a list of length len(LettersDict) that counts the number of times each letter appears in that position
 def LetterCountPosition(position):
-    LocalLetterCount = [0] * 26
+    LocalLetterCount = [0] * len(LettersDict)
     for word in WordleWords:
         LocalLetterCount[ LettersDict[word[position]] - 1 ] += 1
     return LocalLetterCount
 
 # Count the number of times each letter appears in the dictionary
 # Note: If a letter appears multiple times within a word, it will be counted multiple times
-LetterCount = [0] * 26
+LetterCount = [0] * len(LettersDict)
 for word in WordleWords:
     for letter in word:
         LetterCount[LettersDict[letter]-1] += 1
@@ -34,7 +34,7 @@ print('')
 print('Occurrences of each letter Accounting for duplication within a word:   ', LetterCount)
 
 # Define the Graphic
-axletters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+axletters = list(LettersDict.keys())
 plt.bar(axletters, LetterCount, color ='forestgreen', width = 0.4)
 plt.xlabel("Letters")
 plt.ylabel("Appearances in Dictionary")
@@ -44,7 +44,7 @@ plt.close()
 
 # Count the number of times each letter appears in a word the dictionary
 # Note: If a letter appears multiple times within a word, it will only be counted once
-LettersInWordCount = [0] * 26
+LettersInWordCount = [0] * len(LettersDict)
 for word in WordleWords:
     for letter in set(word):
         LettersInWordCount[LettersDict[letter]-1] += 1
