@@ -1,4 +1,5 @@
 import twl
+import matplotlib.pyplot as plt
 
 WordleLength = 5
 
@@ -32,7 +33,25 @@ for word in WordleWords:
 print('')
 
 print('Occurances of each letter Accounting for duplication within a word:   ', LetterCount)
+
+axletters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+plt.bar(axletters, LetterCount, color ='forestgreen',
+        width = 0.4)
+
+plt.xlabel("Letters")
+plt.ylabel("Appearances in Dictionary")
+plt.title("Letter Appearance Accounting for Duplication Within a Word")
+plt.savefig('LettersAccountingForMultiplicity')
+
 print('Occurances of each letter Not Accounting or duplication within a word:', LettersInWordCount)
+
+plt.bar(axletters, LettersInWordCount, color ='forestgreen',
+        width = 0.4)
+
+plt.xlabel("Letters")
+plt.ylabel("Appearances in Dictionary")
+plt.title("Letter Appearance Not Accounting for Duplication Within a Word")
+plt.savefig('LettersNotAccountingForMultiplicity')
 
 print('')
 
