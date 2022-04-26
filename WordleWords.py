@@ -42,6 +42,7 @@ plt.xlabel("Letters")
 plt.ylabel("Appearances in Dictionary")
 plt.title("Letter Appearance Accounting for Duplication Within a Word")
 plt.savefig('LettersAccountingForMultiplicity')
+plt.close()
 
 print('Occurances of each letter Not Accounting or duplication within a word:', LettersInWordCount)
 
@@ -52,6 +53,7 @@ plt.xlabel("Letters")
 plt.ylabel("Words with that letter in Dictionary")
 plt.title("Letter Appearance Not Accounting for Duplication Within a Word")
 plt.savefig('LettersNotAccountingForMultiplicity')
+plt.close()
 
 print('')
 
@@ -89,6 +91,7 @@ for i in range(WordleLength):
     plt.ylabel("Words with that letter in position %s" %str(i))
     plt.title("Letter Appearance in Position %s" %str(i))
     plt.savefig('LetterDistributionPosition%s' %str(i))
+    plt.close()
 
     MaxDistribution = max(Distribution)
     LetterOrder = ''
