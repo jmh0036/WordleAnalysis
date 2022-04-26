@@ -19,34 +19,34 @@ The letter s achieves occurs 4124 times, which is the maximum amount without acc
      Letter Order without accounting for letters occurring multiple times in a single word: s, e, a, r, o, i, l, t, n, u, d, c, y, p, m, h, g, b, k, f, w, v, z, x, j, q
 
 Position 0:
-         Distribution: [513, 621, 681, 470, 198, 441, 433, 349, 120, 139, 220, 416, 460, 208, 185, 581, 56, 434, 1084, 567, 123, 167, 303, 13, 100, 56]
-         Max in Dist:  1084
-         Max Letter:   s
-         Letter Order: s, c, b, p, t, a, d, m, f, r, g, l, h, w, k, n, e, o, v, j, u, i, y, z, q, x
+     Distribution: [513, 621, 681, 470, 198, 441, 433, 349, 120, 139, 220, 416, 460, 208, 185, 581, 56, 434, 1084, 567, 123, 167, 303, 13, 100, 56]
+     Max in Dist:  1084
+     Max Letter:   s
+     Letter Order: s, c, b, p, t, a, d, m, f, r, g, l, h, w, k, n, e, o, v, j, u, i, y, z, q, x
 
 Position 1:
-         Distribution: [1530, 56, 124, 61, 1110, 14, 51, 391, 1001, 7, 58, 519, 122, 251, 1384, 153, 12, 663, 66, 170, 822, 40, 99, 45, 173, 16]
-         Max in Dist:  1530
-         Max Letter:   a
-         Letter Order: a, o, e, i, u, r, l, h, n, y, t, p, c, m, w, s, d, k, b, g, x, v, z, f, q, j
+     Distribution: [1530, 56, 124, 61, 1110, 14, 51, 391, 1001, 7, 58, 519, 122, 251, 1384, 153, 12, 663, 66, 170, 822, 40, 99, 45, 173, 16]
+     Max in Dist:  1530
+     Max Letter:   a
+     Letter Order: a, o, e, i, u, r, l, h, n, y, t, p, c, m, w, s, d, k, b, g, x, v, z, f, q, j
 
 Position 2:
-         Distribution: [866, 231, 286, 285, 580, 126, 253, 70, 763, 26, 158, 609, 353, 659, 696, 255, 8, 822, 354, 450, 456, 169, 159, 94, 123, 87]
-         Max in Dist:  866
-         Max Letter:   a
-         Letter Order: a, r, i, o, n, l, e, u, t, s, m, c, d, p, g, b, v, w, k, f, y, x, z, h, j, q
+     Distribution: [866, 231, 286, 285, 580, 126, 253, 70, 763, 26, 158, 609, 353, 659, 696, 255, 8, 822, 354, 450, 456, 169, 159, 94, 123, 87]
+     Max in Dist:  866
+     Max Letter:   a
+     Letter Order: a, r, i, o, n, l, e, u, t, s, m, c, d, p, g, b, v, w, k, f, y, x, z, h, j, q
 
 Position 3:
-         Distribution: [693, 151, 295, 319, 1749, 155, 285, 148, 601, 14, 338, 543, 279, 535, 482, 281, 1, 467, 360, 643, 265, 98, 92, 8, 67, 69]
-         Max in Dist:  1749
-         Max Letter:   e
-         Letter Order: e, a, t, i, l, n, o, r, s, k, d, c, g, p, m, u, f, b, h, v, w, z, y, j, x, q
+     Distribution: [693, 151, 295, 319, 1749, 155, 285, 148, 601, 14, 338, 543, 279, 535, 482, 281, 1, 467, 360, 643, 265, 98, 92, 8, 67, 69]
+     Max in Dist:  1749
+     Max Letter:   e
+     Letter Order: e, a, t, i, l, n, o, r, s, k, d, c, g, p, m, u, f, b, h, v, w, z, y, j, x, q
 
 Position 4:
-         Distribution: [389, 38, 99, 595, 949, 55, 93, 259, 153, 0, 187, 355, 128, 380, 239, 123, 2, 532, 2785, 491, 33, 2, 40, 50, 940, 21]
-         Max in Dist:  2785
-         Max Letter:   s
-         Letter Order: s, e, y, d, r, t, a, n, l, h, o, k, i, m, p, c, g, f, x, w, b, u, z, v, q, j
+     Distribution: [389, 38, 99, 595, 949, 55, 93, 259, 153, 0, 187, 355, 128, 380, 239, 123, 2, 532, 2785, 491, 33, 2, 40, 50, 940, 21]
+     Max in Dist:  2785
+     Max Letter:   s
+     Letter Order: s, e, y, d, r, t, a, n, l, h, o, k, i, m, p, c, g, f, x, w, b, u, z, v, q, j
 ```
 
 # Graphics
