@@ -31,7 +31,7 @@ for word in WordleWords:
 
 print('')
 
-print('Occurances of each letter Accounting for duplication within a word:   ', LetterCount)
+print('Occurrences of each letter Accounting for duplication within a word:   ', LetterCount)
 
 # Define the Graphic
 axletters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -49,7 +49,7 @@ for word in WordleWords:
     for letter in set(word):
         LettersInWordCount[LettersDict[letter]-1] += 1
 
-print('Occurances of each letter Not Accounting or duplication within a word:', LettersInWordCount)
+print('Occurrences of each letter Not Accounting or duplication within a word:', LettersInWordCount)
 
 # Define Graphic
 plt.bar(axletters, LettersInWordCount, color ='forestgreen', width = 0.4)
@@ -63,7 +63,7 @@ print('')
 
 # Determine the distribution of letters in the dictionary (counting multiples within a word)
 MaxLetterCount = max(LetterCount)
-print('The letter', InvLettersDict[LetterCount.index(MaxLetterCount)+1], 'achieves occurs', MaxLetterCount, 'times, which is the maximum amount accounting for letters occuring multiple times in a single word.')
+print('The letter', InvLettersDict[LetterCount.index(MaxLetterCount)+1], 'achieves occurs', MaxLetterCount, 'times, which is the maximum amount accounting for letters occurring multiple times in a single word.')
 MaxLetterCountDistWithLetter = []
 MaxLetterCountLetterOrder = ''
 for idx,occurrence in enumerate(LetterCount):
@@ -71,12 +71,12 @@ for idx,occurrence in enumerate(LetterCount):
 MaxLetterCountDistWithLetter.sort()
 for letter in MaxLetterCountDistWithLetter:
     MaxLetterCountLetterOrder += letter[1] + ' ,'
-print('    ', 'Letter Order accounting for letters occuring multiple times in a single word:', MaxLetterCountLetterOrder[:-2][::-1])
+print('    ', 'Letter Order accounting for letters occurring multiple times in a single word:', MaxLetterCountLetterOrder[:-2][::-1])
 print('')
 
 # Determine the distribution of letters within a word in the dictionary (NOT counting multiples within a word)
 MaxLettersInWordCount = max(LettersInWordCount)
-print('The letter', InvLettersDict[LettersInWordCount.index(MaxLettersInWordCount)+1], 'achieves occurs', MaxLettersInWordCount, 'times, which is the maximum amount without accounting for letters occuring multiple times in a single word.')
+print('The letter', InvLettersDict[LettersInWordCount.index(MaxLettersInWordCount)+1], 'achieves occurs', MaxLettersInWordCount, 'times, which is the maximum amount without accounting for letters occurring multiple times in a single word.')
 MaxLetterInWordCountDistWithLetter = []
 MaxLetterInWordCountLetterOrder = ''
 for idx,occurrence in enumerate(LettersInWordCount):
@@ -84,7 +84,7 @@ for idx,occurrence in enumerate(LettersInWordCount):
 MaxLetterInWordCountDistWithLetter.sort()
 for letter in MaxLetterInWordCountDistWithLetter:
     MaxLetterInWordCountLetterOrder += letter[1] + ' ,'
-print('    ', 'Letter Order without accounting for letters occuring multiple times in a single word:', MaxLetterInWordCountLetterOrder[:-2][::-1])
+print('    ', 'Letter Order without accounting for letters occurring multiple times in a single word:', MaxLetterInWordCountLetterOrder[:-2][::-1])
 
 print('')
 

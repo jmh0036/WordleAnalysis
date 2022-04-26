@@ -6,17 +6,17 @@ This is some initial analysis on Wordle.  Since a NYTimes dictionary could not b
 
 The shell output of the Wordle analysis is:
 
-```shell
+```console
 Five Letter Words: 8938
 
-Occurances of each letter Accounting for duplication within a word:    [3991, 1097, 1485, 1730, 4586, 791, 1115, 1217, 2638, 186, 961, 2442, 1342, 2033, 2986, 1393, 79, 2918, 4649, 2321, 1699, 476, 693, 210, 1403, 249]
-Occurances of each letter Not Accounting or duplication within a word: [3620, 1023, 1412, 1617, 3993, 708, 1052, 1188, 2516, 184, 924, 2231, 1270, 1922, 2632, 1310, 79, 2753, 4124, 2139, 1657, 465, 689, 209, 1372, 227]
+Occurrences of each letter Accounting for duplication within a word:    [3991, 1097, 1485, 1730, 4586, 791, 1115, 1217, 2638, 186, 961, 2442, 1342, 2033, 2986, 1393, 79, 2918, 4649, 2321, 1699, 476, 693, 210, 1403, 249]
+Occurrences of each letter Not Accounting or duplication within a word: [3620, 1023, 1412, 1617, 3993, 708, 1052, 1188, 2516, 184, 924, 2231, 1270, 1922, 2632, 1310, 79, 2753, 4124, 2139, 1657, 465, 689, 209, 1372, 227]
 
-The letter s achieves occurs 4649 times, which is the maximum amount accounting for letters occuring multiple times in a single word.
-     Letter Order accounting for letters occuring multiple times in a single word: s, e, a, o, r, i, l, t, n, d, u, c, y, p, m, h, g, b, k, f, w, v, z, x, j, q
+The letter s achieves occurs 4649 times, which is the maximum amount accounting for letters occurring multiple times in a single word.
+     Letter Order accounting for letters occurring multiple times in a single word: s, e, a, o, r, i, l, t, n, d, u, c, y, p, m, h, g, b, k, f, w, v, z, x, j, q
 
-The letter s achieves occurs 4124 times, which is the maximum amount without accounting for letters occuring multiple times in a single word.
-     Letter Order without accounting for letters occuring multiple times in a single word: s, e, a, r, o, i, l, t, n, u, d, c, y, p, m, h, g, b, k, f, w, v, z, x, j, q
+The letter s achieves occurs 4124 times, which is the maximum amount without accounting for letters occurring multiple times in a single word.
+     Letter Order without accounting for letters occurring multiple times in a single word: s, e, a, r, o, i, l, t, n, u, d, c, y, p, m, h, g, b, k, f, w, v, z, x, j, q
 
 Position 0:
          Distribution: [513, 621, 681, 470, 198, 441, 433, 349, 120, 139, 220, 416, 460, 208, 185, 581, 56, 434, 1084, 567, 123, 167, 303, 13, 100, 56]
@@ -47,7 +47,6 @@ Position 4:
          Max in Dist:  2785
          Max Letter:   s
          Letter Order: s, e, y, d, r, t, a, n, l, h, o, k, i, m, p, c, g, f, x, w, b, u, z, v, q, j
-
 ```
 
 # Graphics
