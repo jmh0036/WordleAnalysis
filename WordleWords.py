@@ -49,7 +49,7 @@ plt.bar(axletters, LettersInWordCount, color ='forestgreen',
         width = 0.4)
 
 plt.xlabel("Letters")
-plt.ylabel("Appearances in Dictionary")
+plt.ylabel("Words with that letter in Dictionary")
 plt.title("Letter Appearance Not Accounting for Duplication Within a Word")
 plt.savefig('LettersNotAccountingForMultiplicity')
 
