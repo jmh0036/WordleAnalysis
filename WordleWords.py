@@ -82,6 +82,14 @@ print('')
 
 for i in range(WordleLength):
     Distribution = LetterCountPosition(i)
+
+    plt.bar(axletters, Distribution, color ='forestgreen',
+        width = 0.4)
+    plt.xlabel("Letters")
+    plt.ylabel("Words with that letter in Dictionary")
+    plt.title("Letter Appearance Not Accounting for Duplication Within a Word")
+    plt.savefig('LetterDistributionPosition%s' %str(i))
+
     MaxDistribution = max(Distribution)
     LetterOrder = ''
     print('Position', str(i) + ':')
