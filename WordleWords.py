@@ -91,6 +91,7 @@ print('')
 
 # Determine what letters appear the most in a given position
 # for loop ranges over all positions (zero counting)
+PositionDistributions = []
 for i in range(WordleLength):
     # Distribution of letters as achieved from the above function definition.
     Distribution = LetterCountPosition(i)
@@ -117,4 +118,21 @@ for i in range(WordleLength):
     for letter in DistWithLetter:
         LetterOrder += letter[1] + ' ,'
     print('    ', 'Letter Order:', LetterOrder[:-2][::-1])
+    PositionDistributions.append(LetterOrder[:-2][::-1])
     print('')
+
+# Assign weight to each word.  Weight is the um of the rank of each letter position
+# Find a minimum weight word
+MinimumWeight = WordleLength*len(LettersDict)
+WordsWithMinWeight = []
+for word in WordleWords:
+    wordWeight = 0
+    for letteridx in range(WordleLength):
+        wordWeight += PositionDistributions[letteridx].index(word[letteridx])/3
+    if wordWeight < MinimumWeight:
+        MinimumWeight = wordWeight
+        WordsWithMinWeight = [word]
+    if wordWeight == MinimumWeight:
+        WordsWithMinWeight.append(word)
+
+print(MinimumWeight,WordsWithMinWeight)
