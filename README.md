@@ -47,6 +47,8 @@ Position 4:
      Max in Dist:  2785
      Max Letter:   s
      Letter Order: s, e, y, d, r, t, a, n, l, h, o, k, i, m, p, c, g, f, x, w, b, u, z, v, q, j
+
+2.0 ['saree', 'saree', 'cares', 'sores']
 ```
 
 # Graphics
