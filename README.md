@@ -48,7 +48,10 @@ Position 4:
      Max Letter:   s
      Letter Order: s, e, y, d, r, t, a, n, l, h, o, k, i, m, p, c, g, f, x, w, b, u, z, v, q, j
 
-2.0 ['saree', 'saree', 'cares', 'sores']
+The word roast has a weight of 23
+The word bread has a weight of 17
+
+The words ['cares', 'cares', 'sores', 'saree'] have smallest weight of 2
 ```
 
 # Graphics
