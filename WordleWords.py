@@ -196,10 +196,14 @@ while len(GreenList) < WordleLength:
     for w in WordleWords:
         AddWord = True
         for b in BlackList:
-            if b in w:
+            BlackExceptions = []
+            for ex in GreenList:
+                if ex[1] == b:
+                    BlackExceptions.append(ex[0])
+            if b in w and list(w).index(b) not in BlackExceptions:
                 AddWord = False
         for y in YellowList:
-            if y[1] not in w or w[y[0]] == y[1]:
+            if (y[1] not in w) or (w[y[0]] == y[1]):
                 AddWord = False
         for g in GreenList:
             if w[g[0]] != g[1]:
