@@ -162,3 +162,49 @@ for word in WordleWords:
 print('')
 
 print('The words', WordsWithMinWeight, 'have smallest weight of', MinimumWeight)
+
+GreenList = []
+while len(GreenList) < WordleLength:
+    WordChosen = input('What word did you chose? ').lower()
+    while (len(WordChosen) != WordleLength) or (WordChosen not in WordleWords):
+        print('please only enter five letter words.')
+        WordChosen = input('What word did you chose? ').lower()
+    NotValidVerdict = True
+    Verdict = ''
+    while (NotValidVerdict == True) or (len(Verdict) != WordleLength):
+        Verdict = input('What was the verdict? (b - black, y - yellow, g - green): ').lower()
+        NotValidVerdict = False
+        for v in Verdict:
+            if v not in 'byg':
+                NotValidVerdict = True
+        if NotValidVerdict == True:
+            print('Please enter a valid verdict')
+
+    BlackList = ''
+    YellowList = []
+    GreenList = []
+    for i in range(WordleLength):
+        if Verdict[i] == 'b':
+            BlackList += WordChosen[i]
+        if Verdict[i] == 'y':
+            YellowList.append([i, WordChosen[i]])
+        if Verdict[i] == 'g':
+            GreenList.append([i, WordChosen[i]])
+
+    AdmissibleGuesses = []
+
+    for w in WordleWords:
+        AddWord = True
+        for b in BlackList:
+            if b in w:
+                AddWord = False
+        for y in YellowList:
+            if y[1] not in w or w[y[0]] == y[1]:
+                AddWord = False
+        for g in GreenList:
+            if w[g[0]] != g[1]:
+                AddWord = False
+        if AddWord == True:
+            AdmissibleGuesses.append(w)
+
+    print(AdmissibleGuesses)
