@@ -136,32 +136,36 @@ for i in range(WordleLength):
 
 # Assign weight to each word.  Weight is the um of the rank of each letter position
 # Find a minimum weight word
-MinimumWeight = WordleLength*len(LettersDict)
-WordsWithMinWeight = []
-for word in WordleWords:
-    # Initialize / Reset weight
-    wordWeight = 0
-    # Comb through each word
-    for letteridx in range(WordleLength):
-        # Add up the weight for each letter
-        # We need to divide by 3, because of how the displayed string is (#, #, ...)
-        wordWeight += PositionDistributions[letteridx].index(word[letteridx])//3
-    # If we have a new minimum weight, reset the minimum weight overall and the minimum weight word list.
-    if wordWeight < MinimumWeight:
-        MinimumWeight = wordWeight
-        WordsWithMinWeight = [word]
-    # If there's another word with the minimum weight, add it to the minimum weight word list.
-    if wordWeight == MinimumWeight:
-        WordsWithMinWeight.append(word)
-    # These are my personal favorite starting words.  Had to see what their weight was.
-    if word == 'bread':
-        print('The word', word, 'has a weight of', wordWeight)
-    if word == 'roast':
-        print('The word', word, 'has a weight of', wordWeight)
+def MinWeightWords(Wordlist):
+    MinimumWeight = WordleLength*len(LettersDict)
+    WordsWithMinWeight = []
+    for word in Wordlist:
+        # Initialize / Reset weight
+        wordWeight = 0
+        # Comb through each word
+        for letteridx in range(WordleLength):
+            # Add up the weight for each letter
+            # We need to divide by 3, because of how the displayed string is (#, #, ...)
+            wordWeight += PositionDistributions[letteridx].index(word[letteridx])//3
+        # If we have a new minimum weight, reset the minimum weight overall and the minimum weight word list.
+        if wordWeight < MinimumWeight:
+            MinimumWeight = wordWeight
+            WordsWithMinWeight = [word]
+        # If there's another word with the minimum weight, add it to the minimum weight word list.
+        if wordWeight == MinimumWeight:
+            WordsWithMinWeight.append(word)
+        # These are my personal favorite starting words.  Had to see what their weight was.
+        if word == 'bread':
+            print('The word', word, 'has a weight of', wordWeight)
+        if word == 'roast':
+            print('The word', word, 'has a weight of', wordWeight)
 
-print('')
+    print('')
+    return [WordsWithMinWeight, MinimumWeight]
 
-print('The words', WordsWithMinWeight, 'have smallest weight of', MinimumWeight)
+Smallweightwords = MinWeightWords(WordleWords)
+
+print('The words', Smallweightwords[0], 'have smallest weight of', Smallweightwords[1])
 
 GreenList = []
 while len(GreenList) < WordleLength:
@@ -184,7 +188,7 @@ while len(GreenList) < WordleLength:
     YellowList = []
     GreenList = []
     for i in range(WordleLength):
-        if Verdict[i] == 'b':
+        if Verdict[i] == 'b' and (Verdict[i] not in YellowList or Verdict[i] not in GreenList):
             BlackList += WordChosen[i]
         if Verdict[i] == 'y':
             YellowList.append([i, WordChosen[i]])
@@ -212,3 +216,4 @@ while len(GreenList) < WordleLength:
             AdmissibleGuesses.append(w)
 
     print(AdmissibleGuesses)
+    print(MinWeightWords(AdmissibleGuesses))
