@@ -1,7 +1,19 @@
+import string
 import twl
 
-KeyLetter = 'e'
-Letters = 'flntuv'
+KeyLetter = ''
+while len(KeyLetter) != 1:
+    try:
+        KeyLetter = str(input('Letter that must be in each word: '))
+    except:
+        print('Please enter exactly one letter.')
+
+Letters = ''
+while len(Letters) != 6:
+    try:
+        Letters = input('Other letters: ')
+    except:
+        print('Please enter eactly 6 letters.')
 
 SpellingBeeUpperBound = 7
 SpellingBeeLowerBound = 4
@@ -28,6 +40,6 @@ for word in WordsWithKeyLetter:
 print('words with key and letters:', len(PossibleWords))
 
 print('Words:')
-for i in PossibleWords:
+for i in sorted(PossibleWords):
     print('   ', i)
 
