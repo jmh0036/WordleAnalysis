@@ -161,11 +161,17 @@ def MinWeightWords(Wordlist):
             print('The word', word, 'has a weight of', wordWeight)
 
     print('')
-    return [WordsWithMinWeight, MinimumWeight]
+
+    LettersInWord = []
+    for i in WordsWithMinWeight:
+        LettersInWord.append([len(set(i)),i])
+    MostUnique = WordsWithMinWeight.index(max(LettersInWord)[1])
+    return [WordsWithMinWeight, MinimumWeight, WordsWithMinWeight[MostUnique]]
 
 Smallweightwords = MinWeightWords(WordleWords)
 
 print('The words', Smallweightwords[0], 'have smallest weight of', Smallweightwords[1])
+print(Smallweightwords)
 
 GreenList = []
 while len(GreenList) < WordleLength:
