@@ -190,6 +190,8 @@ while len(GreenList) < WordleLength:
         if NotValidVerdict == True:
             print('Please enter a valid verdict')
 
+    WordleWords.remove(WordChosen)
+
     BlackList = ''
     YellowList = []
     GreenList = []
