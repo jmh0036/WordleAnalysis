@@ -196,12 +196,12 @@ while len(GreenList) < WordleLength:
     YellowList = []
     GreenList = []
     for i in range(WordleLength):
-        if Verdict[i] == 'b' and (Verdict[i] not in YellowList or Verdict[i] not in GreenList):
-            BlackList += WordChosen[i]
         if Verdict[i] == 'y':
             YellowList.append([i, WordChosen[i]])
         if Verdict[i] == 'g':
             GreenList.append([i, WordChosen[i]])
+        if Verdict[i] == 'b' and (Verdict[i] not in YellowList or Verdict[i] not in GreenList):
+            BlackList += WordChosen[i]
 
     AdmissibleGuesses = []
 
